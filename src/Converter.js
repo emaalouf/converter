@@ -343,7 +343,7 @@ export default class Converter extends Component {
     return (
       <div className="Converter">
         <h2>
-          <span>Before Currency Shopify Converter </span>{' '}
+          <span>Shopify Converter </span>{' '}
         </h2>{' '}
         Converter
         <div>
