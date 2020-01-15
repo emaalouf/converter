@@ -63,14 +63,14 @@ export default class Converter extends Component {
     axios
       .get('https://api.ipify.org?format=json')
       // .get(
-      //   'http://api.ipapi.com/91.210.107.60?access_key=f23a0af3e90c52ddb69e6ecf20c74b1d'
+      //   'https://api.ipapi.com/91.210.107.60?access_key=f23a0af3e90c52ddb69e6ecf20c74b1d'
       // )
       //   .get('https://ipapi.co/json/')
       .then(response => {
         let myIp = response.data.ip;
         axios
           .get(
-            'http://api.ipapi.com/' +
+            'https://api.ipapi.com/' +
               myIp +
               '?access_key=f23a0af3e90c52ddb69e6ecf20c74b1d'
           )
@@ -104,7 +104,7 @@ export default class Converter extends Component {
   getCurrencyUnit = async () => {
     await axios
       .get(
-        'http://apilayer.net/api/live?access_key=a7a79858888b6a6f60eb926536633007'
+        'https://apilayer.net/api/live?access_key=a7a79858888b6a6f60eb926536633007'
       )
       .then(response => {
         // Initialized with 'EUR' because the base currency is 'EUR'
@@ -141,10 +141,10 @@ export default class Converter extends Component {
   convertHandler = () => {
     axios
       // .get(
-      //   `http://api.openrates.io/latest?base=${this.state.fromCurrency}&symbols=${this.state.toCurrency}`
+      //   `https://api.openrates.io/latest?base=${this.state.fromCurrency}&symbols=${this.state.toCurrency}`
       // )
       .get(
-        'http://apilayer.net/api/live?access_key=a7a79858888b6a6f60eb926536633007'
+        'https://apilayer.net/api/live?access_key=a7a79858888b6a6f60eb926536633007'
       )
       .then(response => {
         if (this.state.fromCurrency1 !== this.state.toCurrency1) {
