@@ -270,7 +270,7 @@ export default class Converter extends Component {
 
   getCurrentCountryAndCurrency = async () => {
     const access_key = '9553e431c17617a714c94cc9367d7264';
-    const ssl_secure = false;
+    const ssl_secure = true;
     try {
       const ipstack_coutry_code_resp = await axios.get(
         (ssl_secure ? 'https://' : 'http://') +
